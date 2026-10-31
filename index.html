@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1.0">
+<title>Tour & Travel Agency</title>
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link rel="stylesheet"
+href="style.css">
+<!--Iconscout Link-->
+<link rel="stylesheet"href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+</head>
+<body>
+<div class="top-header">
+<header class="header">
+
+    <a href="#home" class="logo">
+        <i class="fas fa-hiking"></i> Travelease
+    </a>
+
+    <!-- 3 Line Menu -->
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+
+        <!-- Cross Button -->
+        <div id="nav-close" class="fas fa-times"></div>
+
+        <a href="#home">Home</a>
+        <a href="#category">Adventures</a>
+        <a href="#packages">Packages</a>
+        <a href="#booking">Booking</a>
+        <a href="login.php">Login</a>
+        <a href="#contact">Contact</a>
+
+    </nav>
+</header>
+
+<div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search your destination...">
+    <button type="button" id="searchButton">Search</button>
+</div>
+
+<!-- MAIN NAVBAR -->
+<nav class="main-navbar">
+
+    <!-- ALL PACKAGES -->
+    <a href="#packages" onclick="showAllPackages()">
+        ALL PACKAGES
+    </a>
+
+    <!-- TREK -->
+    <div class="dropdown-menu">
+
+        <a href="javascript:void(0)" class="dropdown-btn">
+            TREK ▾
+        </a>
+
+        <div class="dropdown-content">
+
+            <a href="#packages"
+               onclick="filterPackages('trek')">
+                All Trek
+            </a>
+
+            <a href="#packages"
+               onclick="filterPackages('rajgad')">
+                Rajgad
+            </a>
+
+            <a href="#packages"
+               onclick="filterPackages('sinhagad')">
+                Sinhagad
+            </a>
+
+        </div>
+    </div>
+
+    <!-- HILL STATION -->
+    <div class="dropdown-menu">
+
+        <a href="javascript:void(0)" class="dropdown-btn">
+            HILL STATION ▾
+        </a>
+
+        <div class="dropdown-content">
+
+            <a href="#packages"
+               onclick="filterPackages('hill')">
+                All Hill Stations
+            </a>
+
+            <a href="#packages"
+               onclick="filterPackages('mahabaleshwar')">
+                Mahabaleshwar
+            </a>
+
+            <a href="#packages"
+               onclick="filterPackages('lonavala')">
+                Lonavala
+            </a>
+
+            <a href="#packages"
+               onclick="filterPackages('matheran')">
+                Matheran
+            </a>
+
+            <a href="#packages"
+               onclick="filterPackages('panchgani')">
+                Panchgani
+            </a>
+
+            <a href="#packages"
+               onclick="filterPackages('igatpuri')">
+                Igatpuri
+            </a>
+
+            <a href="#packages"
+               onclick="filterPackages('bhandardara')">
+                Bhandardara
+            </a>
+
+        </div>
+    </div>
+
+
+    <!-- BEACH -->
+    <div class="dropdown-menu">
+
+        <a href="javascript:void(0)" class="dropdown-btn">
+            BEACH ▾
+        </a>
+
+        <div class="dropdown-content">
+
+            <a href="#packages"
+               onclick="filterPackages('beach')">
+                All Beaches
+            </a>
+
+            <a href="#packages"
+               onclick="filterPackages('alibaug')">
+                Alibaug
+            </a>
+
+            <a href="#packages"
+               onclick="filterPackages('tarkarli')">
+                Tarkarli
+            </a>
+
+            <a href="#packages"
+               onclick="filterPackages('ganpatipule')">
+                Ganpatipule
+            </a>
+
+        </div>
+    </div>
+
+
+    <!-- EXPERIENCES -->
+    <div class="dropdown-menu">
+
+        <a href="javascript:void(0)" class="dropdown-btn">
+            EXPERIENCES ▾
+        </a>
+
+        <div class="dropdown-content">
+
+            <a href="#packages"
+               onclick="filterPackages('adventure')">
+                Adventure
+            </a>
+
+            <a href="#packages"
+               onclick="filterPackages('nature')">
+                Nature
+            </a>
+
+            <a href="#packages"
+               onclick="filterPackages('culture')">
+                Culture
+            </a>
+
+            <a href="#packages"
+               onclick="filterPackages('pilgrimage')">
+                Pilgrimage
+            </a>
+
+        </div>
+    </div>
+
+    <!-- DEALS -->
+    <a href="#packages" onclick="showAllPackages()">
+        DEALS
+    </a>
+
+
+    <!-- ABOUT -->
+    <a href="#about">
+        ABOUT US
+    </a>
+
+
+    <!-- CONTACT -->
+    <a href="#contact">
+        CONTACT
+    </a>
+
+</nav>
+</div>
+
+<section class="home" id="home">
+
+    <div class="box">
+
+        <div class="content">
+
+            <span>Travel Easy,</span>
+
+            <h3>Travel Happy</h3>
+
+            <p>
+                Travelease makes your journey simple and memorable
+                with carefully planned tour packages, exciting
+                destinations, and comfortable travel experiences.
+            </p>
+
+            <a href="#packages" class="btn">View Packages</a>
+        </div>
+    </div>
+</section> 
+
+<!-- ================= TOUR PACKAGES ================= -->
+
+<section class="travel-packages" id="packages">
+
+    <h1 class="heading">Maharashtra Tour Packages</h1>
+
+    <div class="travel-container">
+
+        <!-- ================= 1 MAHABALESHWAR ================= -->
+
+               <div class="travel-card"
+               data-category="hill mahabaleshwar nature">
+        
+            <img src="images/mahabaleshwar.jpeg"
+                 alt="Mahabaleshwar">
+
+            <div class="travel-content">
+
+                <h2>Mahabaleshwar</h2>
+
+                <p>3 Days / 2 Nights</p>
+
+                <h3>₹6,999*</h3>
+
+                <a href="javascript:void(0)"
+                class="travel-btn"
+                onclick="showPackage('mahabaleshwar')">
+                View Details
+                </a>
+            </div>
+        </div>
+
+        <!-- ================= 2 LONAVALA ================= -->
+
+            <div class="travel-card"
+            data-category="hill lonavala nature adventure">
+        
+            <img src="images/lonavala.jpeg"
+                 alt="Lonavala">
+
+            <div class="travel-content">
+
+                <h2>Lonavala</h2>
+
+                <p>2 Days / 1 Night</p>
+
+                <h3>₹4,999*</h3>
+
+                <a href="javascript:void(0)"
+                class="travel-btn"
+                onclick="showPackage('lonavala')">
+                    View Details
+                </a>
+
+            </div>
+        </div>
+
+        <!-- ================= 3 MATHERAN ================= -->
+
+               <div class="travel-card"
+               data-category="hill matheran nature">
+
+            <img src="images/matheran.jpeg"
+                 alt="Matheran">
+
+            <div class="travel-content">
+
+                <h2>Matheran</h2>
+
+                <p>2 Days / 1 Night</p>
+
+                <h3>₹4,499*</h3>
+
+                <a href="javascript:void(0)"
+                   class="travel-btn"
+                   onclick="showPackage('matheran')">
+                   view details
+                </a>
+            </div>
+        </div>
+
+        <!-- ================= 4 PANCHGANI ================= -->
+
+        <div class="travel-card"
+             data-category="hill nature">
+
+            <img src="images/panchgani.jpeg"
+                 alt="Panchgani">
+
+            <div class="travel-content">
+
+                <h2>Panchgani</h2>
+
+                <p>2 Days / 1 Night</p>
+
+                <h3>₹4,999*</h3>
+
+                <a href="javascript:void(0)"
+                   class="travel-btn"
+                   onclick="showPackage('panchgani')">
+                   view details
+                </a>                
+            </div>
+        </div>
+
+        <!-- ================= 5 IGATPURI ================= -->
+
+        <div class="travel-card"
+             data-category="hill nature adventure">
+
+            <img src="images/igatpuri.jpeg"
+                 alt="Igatpuri">
+
+            <div class="travel-content">
+
+                <h2>Igatpuri</h2>
+
+                <p>2 Days / 1 Night</p>
+
+                <h3>₹4,499*</h3>
+
+                <a href="javascript:void(0)"
+                class="travel-btn"
+                onclick="showPackage('igatpuri')">
+                View Details
+               </a>
+            </div>
+        </div>
+
+        <!-- ================= 6 BHANDARDARA ================= -->
+
+        <div class="travel-card"
+             data-category="hill nature trek">
+
+            <img src="images/bhandardara.jpeg"
+                 alt="Bhandardara">
+
+            <div class="travel-content">
+
+                <h2>Bhandardara</h2>
+
+                <p>2 Days / 1 Night</p>
+
+                <h3>₹4,999*</h3>
+
+                <a href="javascript:void(0)"
+                class="travel-btn"
+                onclick="showPackage('bhandardara')">
+                View Details
+                </a>
+            </div>
+        </div>
+
+        <!-- ================= 7 RAJGAD ================= -->
+
+               <div class="travel-card"
+               data-category="trek rajgad adventure nature">
+        
+
+            <img src="images/rajgad.jpeg"
+                 alt="Rajgad">
+
+            <div class="travel-content">
+
+                <h2>Rajgad Trek</h2>
+
+                <p>2 Days / 1 Night</p>
+
+                <h3>₹3,999*</h3>
+
+                <a href="javascript:void(0)"
+                 class="travel-btn"
+                onclick="showPackage('rajgad')">
+                View Details
+                </a>
+            </div>
+        </div>
+
+
+        <!-- ================= 8 SINHAGAD ================= -->
+
+        <div class="travel-card"
+             data-category="trek adventure culture">
+
+            <img src="images/sinhagad.jpeg"
+                 alt="Sinhagad">
+
+            <div class="travel-content">
+
+                <h2>Sinhagad</h2>
+
+                <p>1 Day Tour</p>
+
+                <h3>₹1,999*</h3>
+
+                <a href="javascript:void(0)"
+                class="travel-btn"
+                onclick="showPackage('sinhagad')">
+                View Details
+                </a>
+            </div>
+        </div>
+
+
+        <!-- ================= 9 ALIBAUG ================= -->
+
+            <div class="travel-card"
+            data-category="beach alibaug nature">
+        
+            <img src="images/alibaug.jpeg"
+                 alt="Alibaug">
+
+            <div class="travel-content">
+
+                <h2>Alibaug</h2>
+
+                <p>2 Days / 1 Night</p>
+
+                <h3>₹4,999*</h3>
+
+                <a href="javascript:void(0)"
+                class="travel-btn"
+                onclick="showPackage('alibaug')">
+                View Details
+               </a>
+            </div>
+        </div>
+
+        <!-- ================= 10 TARKARLI ================= -->
+
+        <div class="travel-card"
+             data-category="beach adventure nature">
+
+            <img src="images/tarkarli.jpeg"
+                 alt="Tarkarli">
+
+            <div class="travel-content">
+
+                <h2>Tarkarli</h2>
+
+                <p>3 Days / 2 Nights</p>
+
+                <h3>₹7,999*</h3>
+
+                <a href="javascript:void(0)"
+                class="travel-btn"
+                onclick="showPackage('tarkarli')">
+                View Details
+               </a>
+            </div>
+        </div>
+
+        <!-- ================= 11 GANPATIPULE ================= -->
+
+        <div class="travel-card"
+             data-category="beach nature pilgrimage">
+
+            <img src="images/ganpatipule.jpeg"
+                 alt="Ganpatipule">
+
+            <div class="travel-content">
+
+                <h2>Ganpatipule</h2>
+
+                <p>2 Days / 1 Night</p>
+
+                <h3>₹4,999*</h3>
+
+                <a href="javascript:void(0)"
+                class="travel-btn"
+                onclick="showPackage('ganpatipule')">
+                View Details
+                </a>
+            </div>
+        </div>
+
+        <!-- ================= 12 AJANTA ELLORA ================= -->
+
+        <div class="travel-card"
+             data-category="culture nature">
+
+            <img src="images/ajanta-ellora.jpeg"
+                 alt="Ajanta Ellora">
+
+            <div class="travel-content">
+
+                <h2>Ajanta & Ellora</h2>
+
+                <p>2 Days / 1 Night</p>
+
+                <h3>₹5,999*</h3>
+
+                <a href="javascript:void(0)"
+                class="travel-btn"
+                onclick="showPackage('ajanta-ellora')">
+                View Details
+                </a>
+            </div>
+        </div>
+
+        <!-- ================= 13 SHIRDI ================= -->
+
+        <div class="travel-card"
+             data-category="pilgrimage culture">
+
+            <img src="images/shirdi.jpeg"
+                 alt="Shirdi">
+
+            <div class="travel-content">
+
+                <h2>Shirdi</h2>
+
+                <p>2 Days / 1 Night</p>
+
+                <h3>₹3,999*</h3>
+
+                <a href="javascript:void(0)"
+                class="travel-btn"
+                onclick="showPackage('shirdi')">
+                View Details
+                </a>
+            </div>
+        </div>
+
+        <!-- ================= 14 TRIMBAKESHWAR ================= -->
+
+        <div class="travel-card"
+             data-category="pilgrimage nature">
+
+            <img src="images/trimbakeshwar.jpeg"
+                 alt="Trimbakeshwar">
+
+            <div class="travel-content">
+
+                <h2>Trimbakeshwar</h2>
+
+                <p>1 Day Tour</p>
+
+                <h3>₹2,499*</h3>
+
+                <a href="javascript:void(0)"
+                class="travel-btn"
+                onclick="showPackage('trimbakeshwar')">
+                View Details
+                </a>
+            </div>
+        </div>
+
+        <!-- ================= 15 KOLHAPUR ================= -->
+
+        <div class="travel-card"
+             data-category="culture pilgrimage">
+
+            <img src="images/kolhapur.jpeg"
+                 alt="Kolhapur">
+
+            <div class="travel-content">
+
+                <h2>Kolhapur</h2>
+
+                <p>2 Days / 1 Night</p>
+
+                <h3>₹4,499*</h3>
+
+                <a href="javascript:void(0)"
+                class="travel-btn"
+                onclick="showPackage('kolhapur')">
+                View Details
+                </a>
+            </div>
+        </div>
+
+        <!-- ================= 16 KOLAD ================= -->
+
+        <div class="travel-card"
+             data-category="adventure nature">
+
+            <img src="images/kolad.jpeg"
+                 alt="Kolad">
+
+            <div class="travel-content">
+
+                <h2>Kolad Adventure</h2>
+
+                <p>2 Days / 1 Night</p>
+
+                <h3>₹5,499*</h3>
+
+                <a href="javascript:void(0)"
+                class="travel-btn"
+                onclick="showPackage('kolad')">
+                View Details
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="package-details" class="package-details">
+
+    <button onclick="closePackage()" class="close-details">
+        ✕
+    </button>
+
+    <img id="detail-image" src="" alt="">
+
+    <h1 id="detail-title"></h1>
+
+    <p id="detail-duration"></p>
+
+    <h2 id="detail-price"></h2>
+
+    <p id="detail-description"></p>
+
+
+    <h2>Tour Itinerary</h2>
+
+    <div id="detail-itinerary"></div>
+
+
+    <h2>Package Includes</h2>
+
+    <ul id="detail-includes"></ul>
+
+
+    <h2>Package Excludes</h2>
+
+    <ul id="detail-excludes"></ul>
+
+<button class="book-btn" onclick="openBooking()">
+    Book Now
+</button>
+</section>
+ <!-- ================================ BOOKING SECTION ================================ -->
+
+<section class="booking" id="booking">
+
+    <h1 class="heading">Book Your Trip</h1>
+
+    <div class="booking-box">
+
+        <form action="booking.php" method="POST">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Enter Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter Your Email"
+                required
+            >
+
+            <input
+                type="tel"
+                name="phone"
+                placeholder="Enter Mobile Number"
+                required
+            >
+
+            <input
+                type="number"
+                name="persons"
+                placeholder="Number of Persons"
+                min="1"
+                required
+            >
+
+            <input
+                type="date"
+                name="booking_date"
+                required
+            >
+
+            <select name="package_name" required>
+
+                <option value="">Select Package</option>
+
+                <option value="Mahabaleshwar">Mahabaleshwar</option>
+                <option value="Lonavala">Lonavala</option>
+                <option value="Matheran">Matheran</option>
+                <option value="Panchgani">Panchgani</option>
+                <option value="Igatpuri">Igatpuri</option>
+                <option value="Bhandardara">Bhandardara</option>
+                <option value="Rajgad Trek">Rajgad Trek</option>
+                <option value="Sinhagad">Sinhagad</option>
+                <option value="Alibaug">Alibaug</option>
+                <option value="Tarkarli">Tarkarli</option>
+                <option value="Ganpatipule">Ganpatipule</option>
+                <option value="Ajanta & Ellora">Ajanta & Ellora</option>
+                <option value="Shirdi">Shirdi</option>
+                <option value="Trimbakeshwar">Trimbakeshwar</option>
+                <option value="Kolhapur">Kolhapur</option>
+                <option value="Kolad Adventure">Kolad Adventure</option>
+
+            </select>
+
+            <button type="submit">
+                Proceed to Payment
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- ================= ABOUT US ================= -->
+
+<section class="about" id="about">
+
+    <div class="about-container">
+
+        <div class="about-image">
+            <img src="images/about.jpg" alt="Travelease Travel">
+        </div>
+
+        <div class="about-content">
+
+            <span>ABOUT US</span>
+
+            <h2>Welcome to Travelease</h2>
+
+            <p>
+                Travelease is a tour and travel website designed to make
+                trip planning simple, convenient and enjoyable.
+                We provide information about different destinations,
+                tour packages, trekking experiences, hill stations,
+                nature and cultural places.
+            </p>
+
+            <h3>Our Mission</h3>
+
+            <p>
+                Our mission is to provide travelers with easy access to
+                tour information and help them plan their trips
+                conveniently through our website.
+            </p>
+
+            <h3>Why Choose Travelease?</h3>
+
+            <div class="about-features">
+
+                <div class="feature">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p>Beautiful Destinations</p>
+                </div>
+
+                <div class="feature">
+                    <i class="fas fa-suitcase-rolling"></i>
+                    <p>Tour Packages</p>
+                </div>
+
+                <div class="feature">
+                    <i class="fas fa-calendar-check"></i>
+                    <p>Easy Booking</p>
+                </div>
+
+                <div class="feature">
+                    <i class="fas fa-route"></i>
+                    <p>Customized Trips</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="about-bottom">
+
+        <h2>Our Vision</h2>
+
+        <p>
+            Our vision is to create a reliable and user-friendly travel
+            platform that helps people discover beautiful destinations
+            and enjoy memorable journeys.
+        </p>
+
+        <h3>
+            "Explore More. Travel Better. Make Memories with Travelease."
+        </h3>
+
+    </div>
+
+</section>
+<section class="contact"id="contact">
+<div class="wrapper1">
+<div class="title1">
+<h1>Contact Us</h1>    
+</div>    
+<div class="contact-form">
+<form method="post"
+action = "contact_us.php">
+<div class="input-fields">
+
+<input type="text"class="input"  placeholder="Name"name="name">
+<input type="email"class="input"  placeholder="Email Address"name="email"pattern=".+@gmail\.com">
+<input type="phone"class="input"  placeholder="phone"name="phone">
+<input type="text"class="input"  placeholder="Subject"name="subject">    
+</div> 
+<div class="msg">
+<textarea placeholder="Message"name="message"></textarea><br>
+<div class="btn1"><button type="submit">send <i class="uil uil message"></i></button></div>    
+</div>
+</form>    
+</div>
+</div>    
+</section>
+
+<!--FEEDBACK SECTION-->
+<!--Feedback section list-->
+
+<section class="feedback" id="feedback">
+
+<h1 class="heading">Customer Feedback</h1>
+<div class="feedback-container">
+<form action="feedback.php"method="post">
+<input type="text" name="name"  placeholder="Your Name" required>
+<input type="email" name="email"  placeholder="Your Email" required>
+<textarea name="message" placeholder="write your feedback"required></textarea>
+<br></br>
+<button type="submit" class="btn">submit feedback</button>   
+</form>    
+</div>    
+</section> 
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Quick Links -->
+        <div class="footer-box">
+
+            <h3>Quick Links</h3>
+
+            <a href="#home">Home</a>
+            <a href="#packages">Packages</a>
+            <a href="#booking">Booking</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact Us</a>
+
+        </div>
+
+
+        <!-- Extra Links -->
+        <div class="footer-box">
+
+            <h3>Extra Links</h3>
+
+            <a href="#adventure">Adventure</a>
+            <a href="#packages">Tour Packages</a>
+            <a href="#feedback">Customer Feedback</a>
+            <a href="#about">About Travelease</a>
+
+        </div>
+
+
+        <!-- Contact Info -->
+        <div class="footer-box">
+
+            <h3>Contact Info</h3>
+
+            <p>
+                <i class="fas fa-phone"></i>
+                +91 98765 43210
+            </p>
+
+            <p>
+                <i class="fas fa-envelope"></i>
+                info@travelease.com
+            </p>
+
+            <p>
+                <i class="fas fa-map-marker-alt"></i>
+                Maharashtra, India
+            </p>
+
+        </div>
+
+
+        <!-- Follow Us -->
+        <div class="footer-box">
+
+            <h3>Follow Us</h3>
+
+            <p>
+                Follow Travelease for travel updates,
+                new packages and exciting destinations.
+            </p>
+
+            <div class="footer-social">
+
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-youtube"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Copyright -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Travelease | All Rights Reserved
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
