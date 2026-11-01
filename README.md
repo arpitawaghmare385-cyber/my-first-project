@@ -51,3 +51,7 @@ This project was developed as part of the B.Sc. Computer Science academic curric
 
 B.Sc. Computer Science Students
  
+#Project Screenshot
+
+![Travelease Website Screenshot]
+(Screenshot%20(3).png)
